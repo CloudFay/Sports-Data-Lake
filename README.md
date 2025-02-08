@@ -52,7 +52,7 @@ nano setup_nba_data_lake.py
 ```
 
 
-2. In another window, go to [GitHub](https://github.com/CloudFay/Sports-Data-Lake)
+2. In another window, go to [GitHub](https://github.com/CloudFay/Sports-Data-Lake/tree/main/src)
 
 -Copy the contents inside the setup_nba_data_lake.py file
 
@@ -66,14 +66,14 @@ paste your api key inside the quotations
 5. Press ^X to exit, press Y to save the file, press enter to confirm the file name 
 
 
-# Step 4: Run the script
+# Step 3: Run the script
 1. In the CLI type
 ```bash
 python3 setup_nba_data_lake.py
 ```
 -You should see the resources were successfully created, the sample data was uploaded successfully and the Data Lake Setup Completed
 
-# Step 5: Manually Check For The Resources
+# Step 4: Manually Check For The Resources
 1. In the Search Bar, type S3 and click blue hyper link name
 
 -You should see 2 General purpose bucket named "Sports-analytics-data-lake"
