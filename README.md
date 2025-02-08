@@ -1,13 +1,14 @@
-# NBADataLake
+# Overview
 This repository contains the setup_nba_data_lake.py script, which automates the creation of a data lake for NBA analytics using AWS services. The script integrates Amazon S3, AWS Glue, and Amazon Athena, and sets up the infrastructure needed to store and query NBA-related data.
 
-# Overview
 The setup_nba_data_lake.py script performs the following actions:
 
-Creates an Amazon S3 bucket to store raw and processed data.
-Uploads sample NBA data (JSON format) to the S3 bucket.
-Creates an AWS Glue database and an external table for querying the data.
-Configures Amazon Athena for querying data stored in the S3 bucket.
+✅ Creates an Amazon S3 bucket to store raw and processed NBA data.
+✅ Uploads sample NBA data (JSONL format) to the S3 bucket.
+✅ Creates an AWS Glue database and an external table for querying the data.
+✅ Configures Amazon Athena for querying data stored in the S3 bucket using SQL.
+
+With just a few steps, you’ll have a powerful data lake ready for advanced analytics, machine learning, or application development. Let’s get started! 🎯
 
 # Prerequisites
 Before running the script, ensure you have the following:
@@ -48,7 +49,7 @@ nano setup_nba_data_lake.py
 ```
 
 
-2. In another window, go to [GitHub](https://github.com/alahl1/NBADataLake)
+2. In another window, go to [GitHub](https://github.com/CloudFay/Sports-Data-Lake)
 
 -Copy the contents inside the setup_nba_data_lake.py file
 
@@ -57,21 +58,9 @@ nano setup_nba_data_lake.py
 3. Find the line of code under #Sportsdata.io configurations that says "api_key" 
 paste your api key inside the quotations
 
-4. Press ^X to exit, press Y to save the file, press enter to confirm the file name 
+4. Find the line of code under #AWS configurations that says bucket_name and ensure to change to a unique s3 bucket name (e.g sports-analytics-data-lake --> cloudfay-sports-analytics-data-lake)
 
-
-# Step 3: Create .env file
-1. In the CLI (Command Line Interface), type
-```bash
-nano .env
-```
-2. paste the following line of code into your file, ensure you swap out with your API key
-```bash
-SPORTS_DATA_API_KEY=your_sportsdata_api_key
-NBA_ENDPOINT=https://api.sportsdata.io/v3/nba/scores/json/Players
-```
-
-3. Press ^X to exit, press Y to save the file, press enter to confirm the file name 
+5. Press ^X to exit, press Y to save the file, press enter to confirm the file name 
 
 
 # Step 4: Run the script
@@ -99,6 +88,14 @@ python3 setup_nba_data_lake.py
 SELECT FirstName, LastName, Position, Team
 FROM nba_players
 WHERE Position = 'PG';
+```
+
+-Click Run
+-You should see an output if you scroll down under "Query Results"
+
+You can also try this simple query: 
+```bash
+SELECT * FROM "glue_nba_data_lake"."nba_players" limit 10;
 ```
 
 -Click Run
