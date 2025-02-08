@@ -96,7 +96,7 @@ WHERE Position = 'PG';
 -Click Run
 -You should see an output if you scroll down under "Query Results"
 
-You can also try this simple query: 
+5. You can also try this simple query: 
 ```bash
 SELECT * FROM "glue_nba_data_lake"."nba_players" limit 10;
 ```
