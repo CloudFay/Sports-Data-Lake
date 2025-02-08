@@ -15,9 +15,8 @@ glue_database_name = "glue_nba_data_lake"
 athena_output_location = f"s3://{bucket_name}/athena-results/"
 
 # Sportsdata.io configurations (loaded from .env)
-api_key = os.getenv("SPORTS_DATA_API_KEY")  # Get API key from .env
-nba_endpoint = os.getenv("NBA_ENDPOINT")  # Get NBA endpoint from .env
-
+api_key = "SPORTS_DATA_API_KEY"  # Get your API key from sportsdata.io
+nba_endpoint = f"https://api.sportsdata.io/v3/nba/scores/json/Players?key={api_key}"
 # Create AWS clients
 s3_client = boto3.client("s3", region_name=region)
 glue_client = boto3.client("glue", region_name=region)
