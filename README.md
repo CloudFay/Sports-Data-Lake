@@ -94,6 +94,7 @@ WHERE Position = 'PG';
 ```
 
 -Click Run
+
 -You should see an output if you scroll down under "Query Results"
 
 5. You can also try this simple query: 
@@ -102,6 +103,7 @@ SELECT * FROM "glue_nba_data_lake"."nba_players" limit 10;
 ```
 
 -Click Run
+
 -You should see an output if you scroll down under "Query Results"
 
 ### **What We Learned**
