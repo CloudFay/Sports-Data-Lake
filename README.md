@@ -4,8 +4,11 @@ This repository contains the setup_nba_data_lake.py script, which automates the 
 The setup_nba_data_lake.py script performs the following actions:
 
 ✅ Creates an Amazon S3 bucket to store raw and processed NBA data.
+
 ✅ Uploads sample NBA data (JSONL format) to the S3 bucket.
+
 ✅ Creates an AWS Glue database and an external table for querying the data.
+
 ✅ Configures Amazon Athena for querying data stored in the S3 bucket using SQL.
 
 With just a few steps, you’ll have a powerful data lake ready for advanced analytics, machine learning, or application development. Let’s get started! 🎯
